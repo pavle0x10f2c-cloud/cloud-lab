@@ -11,7 +11,7 @@ It uses **Docker**, **LocalStack**, and **Terraform** to simulate AWS services l
 - **AWS CLI / awslocal** — interacts with the fake AWS  
 - **Bash scripts** — generate logs and simulate security events  
 
-##Testing
+## Testing
 # List IAM roles
 docker compose exec localstack awslocal iam list-roles
 
