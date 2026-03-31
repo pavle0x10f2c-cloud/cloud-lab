@@ -12,3 +12,9 @@ It uses **Docker**, **LocalStack**, and **Terraform** to simulate AWS services l
 - **AWS CLI / awslocal** — interacts with the fake AWS  
 - **Bash scripts** — generate logs and simulate security events  
 
+## Troubleshooting 
+-  Error: Unsupported argument
+│ 
+│   on main.tf line 7, in provider "aws":
+│    7:   s3_force_path_style         = true  ->  removed from main.tf
+
