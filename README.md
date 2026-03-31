@@ -1,4 +1,4 @@
-# Cloud Infrastructure & Security Monitoring Lab
+# Cloud Infrastructure & Security Monitoring Lab (WORK IN PROGRESS)
 
 ## Overview
 This project is a **local AWS-like environment** for learning cloud infrastructure, IAM, security groups, EC2 instances, and security monitoring.  
@@ -12,10 +12,10 @@ It uses **Docker**, **LocalStack**, and **Terraform** to simulate AWS services l
 - **Bash scripts** — generate logs and simulate security events  
 
 ## Testing
-# List IAM roles
+## List IAM roles
 docker compose exec localstack awslocal iam list-roles
 
-# List EC2 security groups
+## List EC2 security groups
 docker compose exec localstack awslocal ec2 describe-security-groups
 
 ## Troubleshooting 
