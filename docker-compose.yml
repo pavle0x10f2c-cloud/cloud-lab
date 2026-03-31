@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566"   # main edge port
+      - "4571:4571"   # legacy port
+    environment:
+      - SERVICES=ec2,iam,s3,logs
+      - DEBUG=1
+      - DATA_DIR=/var/lib/localstack
+    volumes:
+      - ./localstack-data:/var/lib/localstack
+
+  terraform:
+    image: hashicorp/terraform:latest
+    container_name: terraform
+    tty: true
+    stdin_open: true
+    working_dir: /workspace
+    volumes:
+      - ./terraform:/workspace
+      - ./aws-creds:/root/.aws  # optional for AWS credentials

@@ -1,0 +1,21 @@
+
+# LocalStack
+localstack-data/
+
+# Terraform
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/
+
+# AWS Credentials
+aws-creds/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS 
+.DS_Store
+*.swp
+*.idea/
+.vscode/
